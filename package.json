@@ -1,0 +1,17 @@
+{
+  "name": "ts-trace-context-baggage-extractor",
+  "version": "0.1.0",
+  "description": "Turns W3C Baggage headers on incoming requests into a typed map for propagation.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
