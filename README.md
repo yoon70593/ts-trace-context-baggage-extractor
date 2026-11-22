@@ -36,3 +36,10 @@ Duplicate keys are resolved last-write-wins. The W3C Baggage specification does 
 - an object with a top-level `get(name)` method.
 
 Header lookup is case-insensitive. If the value is an array of strings, the elements are joined with commas before parsing.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
